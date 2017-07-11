@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.cristian.shopy11.Tools.SuccessScreen">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/message"
+    android:textSize="70dp"
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/colorNewScan"
+    android:text="Succes"
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/select_paying_method"
+    android:layout_marginTop="30dp"
+    android:text="Alegeti modalitatea de plata:"
+    android:layout_below="@+id/message"
+    />
+
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/select_paying_method">
+    <RadioButton android:id="@+id/radio_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/ic_attach_money"
+        android:text="Cash"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginRight="15dp"/>
+    <RadioButton android:id="@+id/radio_paypal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/ic_action_paypal"
+        android:text="Paypal"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginRight="15dp"/>
+    <RadioButton android:id="@+id/radio_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/ic_credit_card"
+        android:text="Card"
+        android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
+
+</RelativeLayout>
